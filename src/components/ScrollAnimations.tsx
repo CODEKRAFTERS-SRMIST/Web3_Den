@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const ScrollAnimations = () => {
   useEffect(() => {
@@ -6,19 +6,17 @@ const ScrollAnimations = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    // Observe all scroll animation elements
-    const elements = document.querySelectorAll('.scroll-fade-in, .scroll-slide-left, .scroll-slide-right');
-    elements.forEach((el) => observer.observe(el));
+    const targets = document.querySelectorAll(
+      ".scroll-fade-in, .scroll-slide-left, .scroll-slide-right"
+    );
+    targets.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);

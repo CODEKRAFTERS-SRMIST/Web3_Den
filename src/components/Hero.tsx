@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CTAModal from "./CTAModal";
+import { useEffect, useState } from "react";
 
 const TYPING_LINES = [
   "> Initializing Web3 environment...",
@@ -8,7 +7,6 @@ const TYPING_LINES = [
 ];
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -89,7 +87,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               id="hero-cta"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => window.open("https://codekraftersrmp.in/login", "_blank")}
               className="group relative px-8 py-4 font-bold text-sm tracking-widest uppercase bg-[hsl(38,96%,54%)] text-[hsl(222,47%,7%)] rounded hover:scale-105 transition-all duration-200 shadow-[0_0_30px_hsl(38,96%,54%,0.4)] hover:shadow-[0_0_45px_hsl(38,96%,54%,0.6)] cursor-pointer"
               style={{ fontFamily: 'Orbitron, monospace' }}
             >
@@ -117,7 +115,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <CTAModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
     </section>
   );
 };

@@ -68,7 +68,7 @@ const Navigation = () => {
 
           {/* CTA */}
           <button
-            onClick={() => window.open("https://codekraftersrmp.in/login", "_blank")}
+            onClick={() => window.open("https://codekraftersrmp.in/login", "_blank", "noopener,noreferrer")}
             className="px-5 py-2 text-xs font-semibold tracking-widest uppercase border border-[hsl(38,96%,54%)/0.5] text-[hsl(38,96%,54%)] rounded hover:bg-[hsl(38,96%,54%)] hover:text-[hsl(222,47%,7%)] transition-all duration-200 cursor-pointer"
             style={{ fontFamily: 'Orbitron, monospace' }}
           >
